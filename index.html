@@ -1,29 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blogin</title>
 
-     <!-- Custom fonts for this template -->
+    <!-- Custom fonts for this template -->
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
 
-     <!-- Custom styles for this template -->
+    <!-- Custom styles for this template -->
     <link rel="stylesheet" href="css/main.css">
 
 </head>
+
 <body>
     <header>
         <div class="container flex space-between align-center">
-            <h1 class="logo">Blogin<span class="logo-endings logo-period">.</span></h1>
-            <nav>
-            <ul id="main-menu" class="main-menu clean-list flex">
-                <li><a href="#">Journal</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <h1 class="logo">Blogin<span class="logo-endings logo-period">.</span>
+            </h1>
+            <nav class="nav-menu">
+                <div class="hamburger-menu" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <ul id="main-menu" class="main-menu clean-list flex">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Journal</a>
+                        <ul class="dropdown-content clean-list">
+                            <li>
+                                <a href="#">October 2016</a>
+                            </li>
+                            <li>
+                                <a href="#">January 2017</a>
+                            </li>
+                            <li>
+                                <a href="#">April 2017</a>
+                            </li>
+                            <li>
+                                <a href="#">May 2018</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">About</a>
+                        <ul class="dropdown-content clean-list">
+                            <li>
+                                <a href="#">Who are we?</a>
+                            </li>
+                            <li>
+                                <a href="#">What we do?</a>
+                            </li>
+                            <li>
+                                <a href="#">More info</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Work</a>
+                        <ul class="dropdown-content clean-list">
+                            <li>
+                                <a href="#">October 2016</a>
+                            </li>
+                            <li>
+                                <a href="#">January 2017</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">About</a>
+                        <ul class="dropdown-content clean-list">
+                        </ul>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -31,60 +83,125 @@
     <main>
         <div class="container flex blog-items">
             <ul class="clean-list">
-                <li class="flex blog-item">
-                    <img class="item-img" src="img/layer1.png" alt="duis aute irure dolor in reprehenderit in voluptate">
-                    <div class="flex column space-between">
-                        <h2 class="item-title">Duis aute irure dolor in henderit in voluptate</h2>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                        <button class="btn item-btn">Continue Reading</button>
+                <li class="flex blog-item space-between">
+                    <div class="img-container">
+                        <img class="item-img" src="img/layer1.png" alt="duis aute irure dolor in reprehenderit in voluptate">
+                    </div>
+                    <div class="item-desc flex column space-between">
+                        <h2 class="item-title overflow">Duis aute irure dolor in henderit in voluptate</h2>
+                        <p class="overflow">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="overflow">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                        <button class="btn item-btn" onclick="niceBoxAlert()">Continue Reading</button>
                     </div>
                 </li>
-                <li class="flex blog-item">
-                    <img class="item-img" src="img/layer2.png" alt="duis aute irure dolor in reprehenderit in voluptate">
-                    <div class="flex column space-between">
+                <li class="flex blog-item space-between">
+                    <div class="img-container">
+                        <img class="item-img" src="img/layer2.png" alt="duis aute irure dolor in reprehenderit in voluptate">
+                    </div>
+                    <div class="item-desc flex column space-between">
                         <h2 class="item-title">Duis aute irure dolor in henderit in voluptate</h2>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                        <button class="btn item-btn">Continue Reading</button>
+                        <button class="btn item-btn" onclick="niceBoxAlert()">Continue Reading</button>
                     </div>
                 </li>
-                <li class="flex blog-item">
-                    <img class="item-img" src="img/layer3.png" alt="duis aute irure dolor in reprehenderit in voluptate">
-                    <div class="flex column space-between">
+                <li class="flex blog-item space-between">
+                    <div class="img-container">
+                        <img class="item-img" src="img/layer3.png" alt="duis aute irure dolor in reprehenderit in voluptate">
+                    </div>
+                    <div class="item-desc flex column space-between">
                         <h2 class="item-title">Duis aute irure dolor in henderit in voluptate</h2>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                        <button class="btn item-btn">Continue Reading</button>
+                        <button class="btn item-btn" onclick="niceBoxAlert()">Continue Reading</button>
                     </div>
                 </li>
-              
             </ul>
         </div>
+    </main>
 
+    <section>
         <div class="container pagination">
             <ul class="clean-list flex space-between">
                 <li class="before tada">Previous</li>
                 <li class="after tada">Next</li>
             </ul>
         </div>
-
-    </main>
+    </section>
 
     <footer>
         <div class="footer-container container flex align-center column space-between">
-            <h1 class="footer-logo">Blogin<span class="logo-period">.</span></h1>
-            <p class="footer-cr">&copy; 2014 Blogin.com - All Rights Reserved - Find more free Templates at <span>Pixelhint.com</span></p>
+            <h1 class="footer-logo">Blogin<span class="logo-period">.</span>
+            </h1>
+            <p class="footer-cr">&copy; 2014 Blogin.com - All Rights Reserved - Find more free Templates at
+                <span>Pixelhint.com</span>
+            </p>
             <div class="footer-media">
                 <ul class="clean-list container flex row space-between">
-                    <li><a href="#" class="fa fa-facebook flex"></a></li>
-                    <li><a href="#" class="fa fa-twitter flex"></a></li>
-                    <li><a href="#" class="fa fa-behance flex"></a></li>
-                    <li><a href="#" class="fa fa-dribbble flex"></a></li>
+                    <li>
+                        <a href="#" class="fa fa-facebook flex"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-twitter flex"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-behance flex"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-dribbble flex"></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </footer>
- 
+
+    <!-- MODAL -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content flex column flex-wrap">
+
+
+            <span class="close">&times;</span>
+            <h2>Join us to get access to the kateast stories</h2>
+            <p>Email:
+                <input type="email" placeholder="Your email address">
+            </p>
+            <button class="modal-btn">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+            var elMenu = document.querySelector(".main-menu");
+            elMenu.classList.toggle("show-menu");
+        }
+
+        // Nice alert box
+        function niceBoxAlert() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = "block";
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                var elMenu = document.querySelector(".main-menu");
+
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+    </script>
+
 </body>
+
 </html>
